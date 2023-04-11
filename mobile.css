@@ -1,0 +1,55 @@
+*{
+    overflow: hidden;
+}
+.main{
+    display: block;
+    padding: 0%;
+}
+header{
+    display: block;
+    position: sticky;
+}
+nav{
+    right: 0%;
+
+}
+nav a{
+    font-size: 1.5rem;
+}
+.main{
+    margin-top: 6%;
+margin-left: 4%;
+}
+.content h2{
+    font-size: 2.2rem;
+}
+.know{
+    display: flex;
+    justify-content: center;
+}
+.social{
+    display: flex;
+    justify-content: center;
+}
+.maininfo{
+    top: 24%;
+}
+.info{
+    width: 90%;
+}
+.image{
+    transform: scale(0.7);
+}
+.flex{
+    width: 94%;
+}
+.text{
+    font-size: large;
+}
+.docimage{
+    margin-left: 23px;
+}
+img.boximage {
+    height: 300px;
+    width: 350px;
+}

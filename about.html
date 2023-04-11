@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>about</title>
+    <style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+}
+body{
+    background-color: #1f242d;
+    background-size: cover;
+}
+header{
+
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: auto;
+    color: #fff;
+    background-color: hsl(230, 89%, 65%);
+}
+.port{
+    position: relative;
+    left: 5%;
+    font-size: 2rem;
+    font-weight: 600;
+}
+nav{
+    position: relative;
+    right: 5%;
+    background-color: transparent;
+}
+nav a{
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+    font-size: 1.7rem;
+    transition: 0.7s;
+}
+nav a:hover{
+    color: black;
+}
+.on{color: black;}
+.bx-user-circle{
+    font-size: 3rem;
+}
+#menu{
+    font-size: 3.4rem;
+    display: none;
+}
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 12px;
+    padding: 12px;
+    border: 2px solid #0ef;
+    border-radius: 12px;
+    box-shadow: 0 0 4px #0ef;
+}
+.boximage{
+    height: 400px;
+    width: 450px;
+    position: relative;
+    right: 4%;
+
+}
+.slide{
+    display: none;
+}
+.main{
+    position: fixed;
+    top: 8%;
+    padding: 4%;
+    width: 100vw;
+}
+.main h1{
+    font-size: 4rem
+}
+.text{
+    font-size: x-large;
+    margin-right: 46px;
+}
+.dots{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+}
+.dot{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 1px solid #0ef;
+    margin: 6px;
+    transition: 0.4s;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="port">
+         <span>   <i class='bx bx-user-circle'></i> &nbsp;    PORTFOLIO </span>
+            <i class='bx bx-menu ' id="menu" ></i>
+        </div>
+        <nav>
+            <a href="index.html" >HOME</a>
+            <a href="about.html" class="on">ABOUT</a>
+            <a href="#">CONTACT ME</a>
+        </nav>
+    </header>
+    <section class="main">
+      <H1>PROJECTS MADE...</H1>
+    <div class="slidechanger">
+      <div class="slide">
+        <div class="flex" id="01">
+            <div class="text">
+                <h1>WEB DEV</h1>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi assumenda quas voluptatem<br> libero facere nemo vel? Minima aut ut officiis dolorem modi, magni iure,<br> dignissimos optio animi corporis ipsa itaque!
+            </div>
+            <div class="image">
+                <img src="Screenshot 2023-04-10 001722.png" alt="" class="boximage">
+            </div>
+        </div>
+      </div>
+        <div class="slide">
+        <div class="flex" id="02">
+            <div class="text">
+                <H1>APP DEV</H1>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi assumenda quas voluptatem<br> libero facere nemo vel? Minima aut ut officiis dolorem modi, magni iure,<br> dignissimos optio animi corporis ipsa itaque!
+                Lorem ipsum dolor sit amet, consectetur<br> adipisicing elit. Voluptatibus animi, ipsam molestiae<br> qui officiis, tempora obcaecati, blanditiis fugiat<br> praesentium odio est omnis unde velit error maiores corrupti dicta ut. Quae.
+            </div>
+            <div class="image">
+                <img src="Screenshot 2023-04-10 001629.png" alt="" class="boximage">
+            </div>
+        </div>
+      </div>
+      <div class="slide" id="03">
+        <div class="flex" >
+            <div class="text">
+                <H1>FLUTTER PROJECT</H1>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi assumenda quas voluptatem<br> libero facere nemo vel? Minima aut ut officiis dolorem modi, magni iure,<br> dignissimos optio animi corporis ipsa itaque!
+                Lorem ipsum dolor sit,<br> amet consectetur adipisicing elit. Quod nihil illum ipsam dicta aperiam ad voluptate quasi
+            </div>
+            <div class="image">
+                <img src="Screenshot 2023-04-10 001704.png" alt="" class="boximage">
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="dots">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+    </section>
+    <script>
+        let index=0;
+       imagechange();
+    //    dotchange();
+        
+   
+   function imagechange(){
+    let slides=document.getElementsByClassName("slide");
+    let doots=document.getElementsByClassName("dot");
+    let i;
+    for( i=0;i<slides.length;i++){
+           slides[i].style.display="none";
+           doots[i].style.background="#1f242d";
+    }
+    index++;
+        if(index>slides.length){index=1}
+        slides[index-1].style.display="block";
+        doots[index-1].style.background="#0ef";
+        setTimeout(imagechange,4000);
+   }
+
+    </script>
+</body>
+</html>
