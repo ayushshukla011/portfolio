@@ -1,7 +1,6 @@
 let index=0;
 imagechange();
  
-
 function imagechange(){
 let slides=document.getElementsByClassName("slide");
 let doots=document.getElementsByClassName("dot");
@@ -27,3 +26,4 @@ content.style.display = "block";
 cross.addEventListener('click', function(){
 content.style.display ="none";
 })
+
